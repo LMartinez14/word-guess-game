@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title> Game of Guess the Word!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    
+
+    <header>
+
+        <div class="row">
+            <div class="col-sm-4 text-center col-sm-offset-2">
+                <h1> Juego de Word Guess </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 text-center col-sm-offset-2">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 text-center col-sm-offset-2">
+                <h2> Do you know your favorite puppers?</h2>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="gameForm" class="row">
+        <div class="row">
+            <p class="col-sm-4">What doggo is it?</p>
+            <div id="currentDog" class="col-sm-8"> woof woof</div> <!-- word to guess-->
+        </div>
+        <div class="row">
+            <p class="col-sm-4">Guesses remaining: </p>
+            <div id="guessesRemaining" class="col-sm-8"> you have this many barks left</div> <!-- what you have left-->
+        </div>
+        <div class="row">
+            <p class="col-sm-4">Accidents: </p>
+            <div id="guessedLetters" class="col-sm-8"> did you pee on the rug?</div> <!-- wrong letters used-->
+        </div>
+    </section>
+
+    <div id="gameStart" class="row">
+        <button class="col-sm-4 col-sm-offset-2" type="button" onclick="startGame()"> What breed should we adopt?</button>
+    </div>
+
+
+
+    <!-- <div id="container-fluid">
+        <header>
+            <div class="row">
+                <div class="col-sm-4 text-center col-sm-offset-2">
+                    <h1> Juego de Word Guess </h1>
+                </div>
+
+                <div class="row">
+                    <hr class="col-sm-4 col-sm-offset-2">
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-center col-sm-offset-2">
+                        <h2> Guess what dog it could be </h2>
+                    </div>
+                </div>
+        </header>
+        </div>
+
+        <container>
+            <div class="row">
+                <div class="col-sm-4 text-center col-sm-offset-2">
+                    <div id="score"></div>
+                    <div id="guesses"> Choose wisely </div>
+                    <div id="lettersUsed"> That's all you've got?</div>
+                </div>
+        </container> -->
+
+
+
+    <script type="text/javascript" src="assets/javascript/game.js"> </script>
+
+
 </body>
+
 </html>
