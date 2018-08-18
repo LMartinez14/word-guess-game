@@ -13,16 +13,18 @@ const doggos = ["german shepherd", "australian terrier", "siberian husky", "pome
 let choice = Math.floor(Math.random() * doggos.length);
 let answer = doggos[choice];
 let wordToGuess = answer.length;
-let display = [wordToGuess];
-let win = wordToGuess;
-let letters = answer.split(" ");
-let attemptsLeft = 10;
-let output = "";
-let userLetter = "";
+let display = [wordToGuess]; //what is being guessed
+let win = wordToGuess; // match to win
+let letters = answer.split(" "); // hide characters
+let attemptsLeft = 10; //guesses left
+let output = ""; //hide characters
+let userLetter = ""; //create an array to hold user input
+let treats = 0; // win counter
+let spanks = 0; // loss counter
 
 // let win = word;
 
-// create current dog function
+// create current dog
 let setup = function () {
   for (var i = 0; i < answer.length; i++) {
     display[i] = " _ ";
@@ -32,6 +34,7 @@ let setup = function () {
   output = " ";
 }
 
+//create the loops for the game
 var submit = function () {
 
   output = "";
@@ -51,6 +54,8 @@ var submit = function () {
   output="";
   attemptsLeft--;
 
+
+  //conditions to add win/loss
   if (win < 1){
     document.getElementById ("guessesRemaining").innerHTML = "Winner";
   }
@@ -61,10 +66,45 @@ var submit = function () {
     document.getElementById ("guessesRemaining").innerHTML = "You have " + attemptsLeft + "guesses remaining.";
   }
 
+/*  while-loop
+while (remainingLetters > 0) {
+  let guessesRemaining = document.getElementById("guessesRemaining");
+  guessesRemaining.innerHTML = answerArray.join(" ");
+  let playerGuess = prompt("choose a letter or click cancel.");
+  if (playerGuess === null) {
+    break;
+  }
+  else if (playerGuess !=== 1) {
+    alert("please choose a single variable");
+  }
+  else {
+    for (let a = 0; a < word.length; a++) {
+      if (word[a] === playerGuess) {
+        answerArray[a] = playerGuess;
+        remainingLetters--;
+      }
+    }
+  }
+
+}
+
+currentDog.innerHTML = answerArray.join(" ";);
+
+let currentDog = document.getElementById ("currentDog");
+  //currentDog.innerHTML = answerArray.join(" ");*/
 
 
 
 }
+// create answer blanks array
+
+// create the game loops
+
+// Show the player their progress
+
+// Take input from the player
+
+// Update answerArray and remainingLetters for every correct guess
 
 
 
